@@ -8,7 +8,7 @@ public class Debugging : MonoBehaviour
     bool debugActive;
     CanvasGroup debugCanvas;
 
-    public GameObject lightTransform;
+    public GameObject DebugLight;
     public Transform player;
 
     // Start is called before the first frame update
@@ -46,13 +46,13 @@ public class Debugging : MonoBehaviour
 
     public void ToggleLight()
     {
-        if (lightTransform.activeSelf)
+        if (DebugLight.activeSelf)
         {
-            lightTransform.SetActive(false);
+            DebugLight.SetActive(false);
         }
         else
         {
-            lightTransform.SetActive(true);
+            DebugLight.SetActive(true);
         }
     }
 
