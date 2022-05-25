@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &80296454984991707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80296454984991706}
+  - component: {fileID: 80296454984991705}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80296454984991706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80296454984991707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &80296454984991705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80296454984991707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f16691e2909fad45a8c4d0af3837539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Monster Footsteps
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: b2f0fb30499647d4abf688234397884f, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    playOnAwake: 0
+    loop: 1
+  - name: Monster Scream
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: e28ce23fa8d169d4b80318830232b9b8, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    playOnAwake: 0
+    loop: 1
+  - name: Creepy Ambient
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: b0ba4434dbf2b414b874ed4ad7a9742d, type: 3}
+    volume: 0.4
+    pitch: 1
+    spatialBlend: 0
+    playOnAwake: 0
+    loop: 1
+  - name: Random Scream
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: f7d3d188f89488d45a7dee168aa53503, type: 3}
+    volume: 0.5
+    pitch: 0.75
+    spatialBlend: 1
+    playOnAwake: 0
+    loop: 0
+  - name: Pyramid Head
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: 3c0f936b78d8703489ae1ecb88f63bf5, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    playOnAwake: 0
+    loop: 1
+  - name: Slot Machine Spinning
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: f80e8d9baa82dda46a33f1baf27a590a, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    playOnAwake: 0
+    loop: 0
+  - name: Slot Machine Win
+    source: {fileID: 0}
+    audioObject: {fileID: 0}
+    clip: {fileID: 8300000, guid: c78132659ea6d754b86ca00bb9d1952f, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    playOnAwake: 0
+    loop: 0
