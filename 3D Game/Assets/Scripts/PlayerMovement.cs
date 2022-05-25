@@ -26,11 +26,15 @@ public class PlayerMovement : MonoBehaviour
     public float staminaDepletionRate = 20f;
     public float staminaRegenRate = 10f;
     public float staminaDelay = 1f;
+    AudioManager audioManager;
+    bool isBreathing;
 
     void Start() 
     {
+        audioManager = FindObjectOfType<AudioManager>();
         speed = walkSpeed;
         stamina = Mathf.Clamp(stamina, 0, MaxStamina);
+
     }
     
     void Update()
@@ -38,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         Jump();
         
+
+        BreathingSound();
         StartCoroutine(DepleteStamina());
         StartCoroutine(RegenerateStamina());
     }
@@ -104,5 +110,14 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(staminaDelay);
         }
         yield return new WaitForSeconds(staminaDelay);
+    }
+
+    void BreathingSound()
+    {
+        if (stamina < 50 && !isBreathing)
+        {
+            isBreathing = true;
+            audioManager.Play("Breathing");
+        }
     }
 }
