@@ -9354,8 +9354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 62.889954, y: 0}
+  m_SizeDelta: {x: -125.78004, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &579882043
 GameObject:
@@ -30341,7 +30341,7 @@ PrefabInstance:
     - target: {fileID: 80296454984991705, guid: 46b886198ed896747aaee4886f93d61b, type: 3}
       propertyPath: sounds.Array.data[9].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 992dc11b89320544c9c08c619d979d5c, type: 3}
+      objectReference: {fileID: 8300000, guid: 44c9a56ca9da6e44cbac2cded4a3a76a, type: 3}
     - target: {fileID: 80296454984991705, guid: 46b886198ed896747aaee4886f93d61b, type: 3}
       propertyPath: sounds.Array.data[9].loop
       value: 1
