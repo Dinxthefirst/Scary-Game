@@ -11,6 +11,8 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<Player>().lookedAtSlotMachine = true;
+            other.gameObject.GetComponent<Player>().UpdateObjectiveText(1);
             door.CloseDoor();
             monster.SetActive(true);
             Destroy(gameObject);

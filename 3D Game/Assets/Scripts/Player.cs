@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public GameUI gameUI;
 
     SlotMachine slotMachine;
+    public bool lookedAtSlotMachine;
     Door door;
     
     void Start()
@@ -37,9 +38,21 @@ public class Player : MonoBehaviour
 
         Debug.DrawRay(ray.origin, ray.direction * lookDistance, Color.white);
 
+        if (!lookedAtSlotMachine) 
+        {
+            if (Physics.Raycast(ray, out hit, lookDistance)) 
+            {
+                if (hit.collider.gameObject.tag == "Slot Machine")
+                {
+                    UpdateObjectiveText(1);
+                    lookedAtSlotMachine = true;
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(ray, out hit, lookDistance)) // change to collider
+            if (Physics.Raycast(ray, out hit, lookDistance)) 
             {
                 Debug.DrawLine(ray.origin, ray.direction * lookDistance, Color.red);
                 if (hit.collider.gameObject.tag == "Coin")
@@ -54,6 +67,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void UpdateObjectiveText(int state) 
+    {
+        gameUI.UpdateObjectiveText(state);
+    }
+
     void LookingAtCoin() 
     {
         coins++;
@@ -61,6 +79,7 @@ public class Player : MonoBehaviour
         if(totalCoins >= coinSpawner.coinAmount)
         {
             door.OpenDoor();
+            UpdateObjectiveText(2);
         }
         Destroy(hit.collider.gameObject);
         gameUI.UpdateCoinText((coins + "/" + coinSpawner.coinAmount).ToString());

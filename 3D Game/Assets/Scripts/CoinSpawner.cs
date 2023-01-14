@@ -17,12 +17,23 @@ public class CoinSpawner : MonoBehaviour
 
     void SpawnCoins() 
     {
-        for(int i = 0; i < coinSpawnPoints.Length; i++)
+        int coinsToSpawn = 7;
+        bool[] spawnedLocations = new bool[coinSpawnPoints.Length];
+
+        while (coinsToSpawn > 0) 
         {
-            if (Random.Range(0, 2) == 0)
+            for (int i = 0; i < coinSpawnPoints.Length; i++)
             {
-                Instantiate(coin, coinSpawnPoints[i].position, coinSpawnPoints[i].rotation);
-                coinAmount += 1;
+                if (!spawnedLocations[i]) {
+                    if (Random.Range(0, 10) == 0)
+                    {
+                        Instantiate(coin, coinSpawnPoints[i].position, coinSpawnPoints[i].rotation);
+                        coinAmount += 1;
+                        spawnedLocations[i] = true;
+                        coinsToSpawn--;
+                        break;
+                    }
+                }
             }
         }
     }

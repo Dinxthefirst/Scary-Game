@@ -13,7 +13,6 @@ public class ScaryMan : MonoBehaviour
 
     AudioManager audioManager;
     bool playingAudio;
-
     
     void Start()
     {
@@ -25,7 +24,7 @@ public class ScaryMan : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) < moveRadius && Vector3.Distance(player.transform.position, transform.position) > disappearRadius)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position + Vector3.up, moveSpeed * Time.deltaTime);
             PlayScaryManSound();
         }
         if (Vector3.Distance(player.transform.position, transform.position) < disappearRadius) 
